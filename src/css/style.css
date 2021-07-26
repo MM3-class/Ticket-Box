@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1rem;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+/*HEADER*/
+header {
+    display: flex;
+    background-color: rgb(164, 245, 245);
+    width: 100%;
+}
+header img {
+    width: 80px;
+    height: auto;
+    padding: 10px;
+}
+.head-title {
+    height: 100%;
+    margin: auto 40px;
+    letter-spacing: 2px;
+    color: #555;
+}
+/*FORM FIELD*/
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+    align-items: center;
+}
+.form-field {
+    margin: 20px auto;
+    width: 50%;
+}
+.full-name {
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+}
+.first-name label, .last-name label, .e-mail label,
+.ticket-quantity label, .contact-number label {
+    display: block;
+    text-align: start;
+    padding-bottom: 5px;
+}
+input:focus {
+    outline: none;
+}
+.first-name input, .last-name input {
+    padding: 5px;
+    width: 300px;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: none;
+    border-bottom: 1px solid #999;
+}
+.first-name {
+    margin-right: 15px;
+}
+.e-mail, .contact-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px auto;
+}
+.e-mail input, .contact-number input{
+    padding: 5px;
+    width: 615px;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: none;
+    border-bottom: 1px solid #999;
+}
+.ticket-type .admin, .vip {
+    width: 200px;
+    padding: 10px 0;
+}
+.ticket-type {
+    display: block; 
+}
+.ticket-info {
+    display: flex;
+    width: 90%;
+    margin: 25px;
+}
+.ticket-quantity {
+    margin-right: 50px;
+}
+.ticket-quantity select {
+    width: 200px;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: none;
+    border-bottom: 1px solid #999;
+    color: #333;
+}
+.ticket-type label{
+    padding: 10px;
+}
+.ticket-type  legend, .ticket-info label {
+    padding-bottom: 10px;
+}
+.hear-about legend {
+    padding: 10px 0;
+}
+.hear-about {
+    display: block;
+    width: 90%;
+}
+.hear-about > div {
+    padding-bottom: 10px;
+}
+.special-req label {
+    display: block;
+    padding-bottom: 10px;
+}
+textarea:focus {
+    outline: none;
+}
+.special-req textarea {
+    min-height: 100px;
+    min-width:50%;
+    max-width: 80%;
+    color: #333;
+    font-size: .9rem;
+    font-family: 'Lucida Sans', sans-serif;
+    padding: .4rem .8rem;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: inset;
+    border: 1px solid #999;
+}
+.special-req {
+    text-align: start;
+    width: 90%;
+    margin: 25px;
+}
+.description {
+    margin: 15px 0;
+    background-color: rgb(225, 238, 241);
+    padding: 5px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+.purchase-agreement {
+    width: 90%;
+}
+.purchase-agreement legend {
+    padding-bottom: 10px;
+}
+.signature {
+    width: 90%;
+    margin: 25px 0;
+}
+.signature input {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 15px;
+    color: #555;
+    letter-spacing: 3px;
+}
+.btn-field {
+    width: 90%;
+    display: flex; 
+}
+.btn-field .submit {
+    padding: .85rem 2.29rem;
+    margin-left: 20px;
+    background-color: #4c7ef3;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: .25s;
+}
+.btn-field .reset {
+    padding: .85rem 2.29rem;
+    background-color: #e85b49;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: .25s;
+}
+.btn-field .reset:hover {
+    background-color: #e73119;
+}
+
+/*Mobile Screen*/
+@media screen and (max-width: 288px) {
+    header {
+        width: 100%
+    }
+    .form-field {
+        width: 100%;
+        font-size: 10px;
+    }
+    .full-name input, .e-mail input, .contact-number input{
+        width: 80%;
+        padding: 10px 60px;
+    }
+    .full-name, .e-mail, .contact-number {
+        margin-left: 10px;
+    }
+    .ticket-info  {
+        display: flex;
+        flex-direction: column;
+    }
+    .ticket-type {
+        padding-top: 30px;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Flight booking</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="./src/img/airplane.png" alt="airplane">
+            <h1 class="head-title">TICKET BOX</h1>
+        </header>
+        <form class="form-field" @reset="resetField" @submit="submitForm" autocomplete="on">
+            <div class="full-name">
+                <div class="first-name">
+                    <label for="first-name">First Name</label>
+                    <input type="text" v-model="first_name" v-bind:style="firstNameIsValid" required>
+                </div>
+                <div class="last-name">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" v-model="last_name" v-bind:style="lastNameIsValid" required>
+                </div>
+            </div>
+
+            <div class="e-mail">
+                <label for="e-mail">Email</label>
+                <input type="email" v-model="email" v-bind:style="emailIsValid" required>
+            </div>
+            <div class="contact-number">
+                <label for="PhoneNumber">Phone Number</label>
+                <input type="tel" name="idNumber" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+
+            <div class="ticket-info">
+                <div class="ticket-quantity">
+                    <label for="ticket-quatity">Ticket Quantity</label>
+                    <select name="ticket-quantity" id="ticket-quantity" v-model="t_quantity">
+                        <option disabled selected>Select Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="ticket-type">
+                    <legend for="ticket-type">Ticket Type</legend>
+                    <div class="admin">
+                        <input type="radio" name="ticket-type" value="General Admission" v-model="t_type">
+                        <label for="general">General Admission</label>
+                    </div>
+                    <div class="vip">
+                        <input type="radio" name="ticket-type" value="VIP" v-model="t_type">
+                        <label for="vip">VIP</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hear-about">
+                <legend for="hear-about-us">How did you hear about this event?</legend>
+                <div>
+                    <input type="checkbox" name="friend" value="friend" v-model="referrals">
+                    <label for="Friend">Friend</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Publication" value="Publication" v-model="referrals">
+                    <label for="Publication">Publication</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Social Media" value="social" v-model="referrals">
+                    <label for="Social Media">Social Media</label>
+                </div>
+            </div>
+
+            <div class="special-req">
+                <label for="special-request">Special Request</label>
+                <textarea name="special-request" id="special-request" v-model="request"></textarea>
+            </div>
+
+            <div class="purchase-agreement">
+                <legend>Purchase Agreement</legend>
+
+                    <div class='description' v-if="formIsValid"><p>I,<strong>{{this.full_name}}</strong> wish to buy {{this.t_quantity}} {{this.t_type}} {{this.ticketDescription}} And my Email is <strong>{{this.email}}</strong>. <br> I understand that all ticket sales are final. <br> I hope someone from sales department contact me.</p></div>
+
+                <input type="checkbox" name="agreement" id="agreement" v-model="agreement">
+                <label for="agreement">I Agree</label>
+            </div>
+
+            <div class="signature">
+                <label for="signature">Signature</label>
+                <input type="text" v-model="full_name" disabled>
+            </div>
+
+            <div class="btn-field">
+                <button type="reset" class="reset">Reset</button>
+                <button type="submit" class="submit" v-bind:disabled="!formIsValid" v-bind:style="formCompleted">Confirm Ticket</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./src/js/app.js" defer></script>
+</body>
+</html>
