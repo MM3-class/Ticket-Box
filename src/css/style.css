@@ -197,12 +197,16 @@ textarea:focus {
 }
 
 /*Mobile Screen*/
-@media screen and (max-width: 288px) {
+@media screen and (max-width: 768px) {
+    #app {
+        overflow-x: hidden;
+    }
     header {
-        width: 100%
+        width: 100%;
+        font-size: 1rem;
     }
     .form-field {
-        width: 100%;
+        width: 90%;
         font-size: 10px;
     }
     .full-name input, .e-mail input, .contact-number input{
@@ -219,5 +223,11 @@ textarea:focus {
     .ticket-type {
         padding-top: 30px;
         line-height: 1;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .form-field {
+        width: 90%;
+        font-size: 10px;
     }
 }
