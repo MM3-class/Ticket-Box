@@ -225,6 +225,7 @@ textarea:focus {
         line-height: 1;
     }
 }
+
 @media only screen and (max-width: 992px) {
     .form-field {
         width: 90%;
