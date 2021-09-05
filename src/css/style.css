@@ -210,8 +210,8 @@ textarea:focus {
         font-size: 10px;
     }
     .full-name input, .e-mail input, .contact-number input{
-        width: 80%;
-        padding: 10px 60px;
+        width: 100%;
+        font-size: .8rem;
     }
     .full-name, .e-mail, .contact-number {
         margin-left: 10px;
