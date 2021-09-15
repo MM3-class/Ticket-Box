@@ -1,3 +1,8 @@
 # Ticket-Box
 Form Validation with Vue.js
-I create Web App and data visualizations, with my most recent work being the development of a custom map UI built on GL JS for a UAE country. I work Primarily in JAVASCRIPT. <br> Mapbox GL JS maps are dynamically rendered by combining vector tiles with style rules in the browser rather than on a server, which makes it possible to change the maps's style and displayed data in response to user interaction.
+it's really very Important to roll your own form validations. This can be done with a simple method call on the form submit, or a computed property evaluating input data on each change.
+Using your form validation can quickly become cumbersome and annoying, however, especially when the number of inputs in the form increase, or the form structure gets more complicated e.g. multi-step forms. I made this Web Application for Validate:
+-Validation
+-Multi-step form validation
+-Child component validation
+-Error messages
